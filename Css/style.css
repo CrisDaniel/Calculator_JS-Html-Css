@@ -1,22 +1,28 @@
 .contenedor{
-    width: 500px;
-    height: 500px;
+    width: min-content;
+    height: min-content;
     background-color: coral;
+    overflow: hidden;
 }
 
 .botones{
     background-color: chartreuse;
-    /*padding: 100px;*/
-    /*height: 500px;
-    width: 100px;*/
+    padding: 10px;
+    width: fit-content;
+    margin: 10px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 50px);
     grid-gap: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5),
+                0 0 10px rgba(0,0,0,0.5),
+                0 0 10px rgba(0,0,0,0.5),
+                0 0 10px rgba(0,0,0,0.5);
 }
 
-#numero{    
+.numero{   
+    box-sizing: border-box; 
     background-color: darkblue;
-    margin: 10px;
     width: 50px;
     height: 50px;
     border: none;
@@ -25,10 +31,21 @@
     font-size: 30px;
     display: flex;
     justify-content: center;
-    align-items: cen;
+    align-items: center;
+    cursor: pointer;
+}
+
+.numero:hover{
+    background-color: rgb(0, 0, 201);
+}
+
+.numero:active{
+    transform: scale(1.1);
 }
 
 .espacioText{
     background-color: aqua;
+    font-size: 25px;
     text-align: right;
+    height: 50px;
 }
