@@ -1,8 +1,11 @@
 function agregar(idNumero) {
-    console.log("Hola");
-    let numero = document.getElementById(idNumero).innerHTML;
+    let numero = idNumero.innerHTML;
+    let mostrarNumero = document.getElementById("mostrar");
     console.log(numero);
-    console.log("Holaaaaaa");
-    document.getElementById("mostrar").innerHTML = numero.innerHTML;
-    
+
+    if(isNaN){
+        mostrarNumero.innerHTML += numero;
+    }else {
+        mostrarNumero.innerHTML += numero ;
+    }
 }

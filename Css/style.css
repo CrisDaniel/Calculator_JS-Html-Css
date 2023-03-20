@@ -1,12 +1,13 @@
 .contenedor{
     width: min-content;
     height: min-content;
-    background-color: coral;
+    background-color: rgb(217, 80, 7);
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .botones{
-    background-color: chartreuse;
+    background-color: rgb(45, 26, 85);
     padding: 10px;
     width: fit-content;
     margin: 10px;
@@ -14,15 +15,15 @@
     grid-template-columns: repeat(4, 50px);
     grid-gap: 10px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5),
-                0 0 10px rgba(0,0,0,0.5),
-                0 0 10px rgba(0,0,0,0.5),
-                0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.9),
+                0 0 10px rgba(0,0,0,0.9),
+                0 0 10px rgba(0,0,0,0.9),
+                0 0 10px rgba(0,0,0,0.9);
 }
 
 .numero{   
     box-sizing: border-box; 
-    background-color: darkblue;
+    background-color: rgb(88, 88, 192);
     width: 50px;
     height: 50px;
     border: none;
@@ -45,7 +46,16 @@
 
 .espacioText{
     background-color: aqua;
+    height: 50px;
+    margin: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.text{
+    background-color: rgba(223, 31, 31, 0.475);
+    border-color: rgb(26, 14, 14) 1px solid;
     font-size: 25px;
     text-align: right;
-    height: 50px;
+    color: rgb(0, 0, 0);
+    height: 20px;
 }
