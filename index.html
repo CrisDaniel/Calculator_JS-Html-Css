@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora</title>
-    <link rel="stylesheet" href="Css/style.css">
-    <script src="Js/app.js"></script>
-</head>
-<body>
-    <h1>Calculadora Estandar</h1>
-    <div class="contenedor">
-        <div class="espacioText">
-            <div class="text" id="mostrar">0</div>
+    <link rel="stylesheet" href="Css/style.css" />
+  </head>
+  <body>
+    <header>
+        <h1 class="titulo">Calculadora Estandar</h1>
+    </header>
+
+    <main class="calculator">
+        <div class="contenedor">
+            <div class="espacioText">
+                <div class="text" id="operacion">0</div>
+                <div class="text" id="resultado">0</div>
+            </div>
+            <div class="group-botones">
+                <div class="numero" id="off" onclick="apagar(off)">Off</div>
+                <div class="numero" id="on" onclick="prender(on)">On</div>
+                <div class="numero" id="ce" onclick="limpiar(ce)">CE</div>
+                <div class="numero" id="borrarNumero" onclick="borrar(borrarNumero)">D</div>
+                <div class="numero" id="one" onclick="agregar(one)">1</div>
+                <div class="numero" id="two" onclick="agregar(two)">2</div>
+                <div class="numero" id="three" onclick="agregar(three)">3</div>
+                <div class="numero" id="plus" onclick="sumar(plus)">+</div>
+                <div class="numero" id="four" onclick="agregar(four)">4</div>
+                <div class="numero" id="five" onclick="agregar(five)">5</div>
+                <div class="numero" id="six" onclick="agregar(six)">6</div>
+                <div class="numero" id="minus" onclick="restar(minus)">-</div>
+                <div class="numero" id="seven" onclick="agregar(seven)">7</div>
+                <div class="numero" id="eight" onclick="agregar(eight)">8</div>
+                <div class="numero" id="nine" onclick="agregar(nine)">9</div>
+                <div class="numero" id="multiply" onclick="multiplicar(multiply)">*</div>
+                <div class="numero" id="zero" onclick="agregar(zero)">0</div>
+                <div class="numero" id="point" onclick="agregar(point)">.</div>
+                <div class="numero" id="equal" onclick="mostrarResultado(equal)">=</div>
+                <div class="numero" id="divided" onclick="dividir(divided)">/</div>
+            </div>
         </div>
-        <div class="botones">
-            <div class="numero" id="one" onclick="agregar(one)">1</div>
-            <div class="numero" id="two" onclick="agregar(two)">2</div>
-            <div class="numero" id="three" onclick="agregar(three)">3</div>
-            <div class="numero" id="plus" onclick="agregar(plus)">+</div>
-            <div class="numero" id="four" onclick="agregar(four)">4</div>
-            <div class="numero" id="five" onclick="agregar(five)">5</div>
-            <div class="numero" id="six" onclick="agregar(six)">6</div>
-            <div class="numero" id="minus" onclick="agregar(minus)">-</div>
-            <div class="numero" id="seven" onclick="agregar(seven)">7</div>
-            <div class="numero" id="eight" onclick="agregar(eight)">8</div>
-            <div class="numero" id="nine" onclick="agregar(nine)">9</div>
-            <div class="numero" id="multiply" onclick="agregar(multiply)">*</div>
-            <div class="numero" id="zero" onclick="agregar(zero)">0</div>
-            <div class="numero" id="point" onclick="agregar(point)">.</div>
-            <div class="numero" id="equal" onclick="agregar(equal)">=</div>
-            <div class="numero" id="divided" onclick="agregar(divided)">/</div>
-        </div>
-    </div>
-</body>
+    </main>
+
+  </body>
+  <script src="Js/app.js"></script>
 </html>
