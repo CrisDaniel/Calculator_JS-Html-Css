@@ -1,0 +1,22 @@
+{
+  "name": "calculadora",
+  "version": "1.0.0",
+  "description": "New calculator",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrisDaniel/Calculator_JS-Html-Css.git"
+  },
+  "keywords": [
+    "calculator"
+  ],
+  "author": "Cristian Daniel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrisDaniel/Calculator_JS-Html-Css/issues"
+  },
+  "homepage": "https://github.com/CrisDaniel/Calculator_JS-Html-Css#readme"
+}

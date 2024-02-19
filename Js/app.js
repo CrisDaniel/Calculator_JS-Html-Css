@@ -1,53 +1,69 @@
 let mostrarOperacion = document.getElementById("operacion");
-let firstVal;
+let mostrarResultado = document.getElementById("resultado");
+let firstValor, secondValor, arrayNum;
 
 function agregar(idNumero) {
-    let numero = parseInt(idNumero.innerHTML);
-    let mostrar = mostrarOperacion.innerHTML;
-
-    mostrar === "0" ? mostrar= numero : mostrar += numero;
-    firstVal = parseInt(mostrar);
-    console.log(firstVal);
-    /*if(isNaN){
-        mostrarOperacion.innerHTML += numero;
-    }*/
+  mostrarOperacion.innerHTML == "0"
+    ? (mostrarOperacion.innerHTML = idNumero.innerHTML)
+    : (mostrarOperacion.innerHTML += idNumero.innerHTML);
 }
 
-function sumar(idSumar){
-
-    mostrarOperacion.innerHTML += idSumar.innerHTML;
-    console.log(mostrarOperacion);
+function mostrar(resultado) {
+  mostrarResultado.innerHTML = resultado;
 }
 
-function restar(id){
-    console.log(id.innerHTML);
+function limpiar() {
+  mostrarOperacion.innerHTML = "0";
+  mostrarResultado.innerHTML = "0";
 }
 
-
-function multiplicar(id){
-    console.log(id.innerHTML);
+function prender(id) {
+  console.log(id.innerHTML);
 }
 
-function dividir(id){
-    console.log(id.innerHTML);
+function apagar(id) {
+  console.log(id.innerHTML);
 }
 
-function limpiar(){
-    mostrarOperacion.innerHTML = "0";
+function borrar(idBorrar) {
+  if (mostrarOperacion.innerHTML == "") {
+    limpiar();
+  } else {
+    let newArrayNum = mostrarOperacion.innerHTML.slice(
+      0,
+      mostrarOperacion.innerHTML.length - 1
+    );
+    mostrarOperacion.innerHTML = newArrayNum;
+  }
 }
 
-function prender(id){
-    console.log(id.innerHTML);
-}
+function resolver(id) {
+  arrayNum = mostrarOperacion.innerHTML.split("");
+  let operadores = ["+", "-", "*", "/"];
 
-function apagar(id){
-    console.log(id.innerHTML);
-}
+  let operador = arrayNum.filter((char) => operadores.includes(char)).join("");
+  let indice = arrayNum.indexOf(operador);
+  firstValor = parseFloat(arrayNum.slice(0, indice).join(""), 10);
+  secondValor = parseFloat(arrayNum.slice(indice + 1).join(""), 10);
 
-function borrar(idBorrar){
-    console.log(idBorrar.innerHTML);
-}
-
-function mostrarResultado(id){
-    console.log(id.innerHTML);
+  switch (operador) {
+    case "+":
+      let suma = firstValor + secondValor;
+      mostrar(suma);
+      break;
+    case "-":
+      let resta = firstValor - secondValor;
+      mostrar(resta);
+      break;
+    case "*":
+      let mul = firstValor * secondValor;
+      mostrar(mul);
+      break;
+    case "/":
+      let div = firstValor / secondValor;
+      mostrar(div);
+      break;
+    default:
+      break;
+  }
 }
