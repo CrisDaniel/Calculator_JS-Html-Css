@@ -4,8 +4,6 @@ body{
     background-repeat: no-repeat;
 }
 
-
-
 .titulo{
     display: flex;
     color: white;
@@ -23,7 +21,7 @@ body{
 .contenedor{
     display: flex;
     flex-direction: column;
-    background-color: rgb(217, 80, 7);
+    background-color: rgb(47, 32, 158);
     border-radius: 10px;
 }
 
@@ -60,6 +58,12 @@ body{
                 0 0 10px rgba(0, 0, 0, 0.319),
                 0 0 10px rgba(0, 0, 0, 0.263);
     border-radius: 5px;
+}
+
+#on-off {
+    grid-column: span 2; /* Ocupa el ancho de dos columnas */
+    text-align: center; /* Centra el texto */
+    width: auto; /*Toma todo el ancho de la dos columnas*/
 }
 
 .numero{   

@@ -1,0 +1,15 @@
+#buttonContainer button{
+    display: flex;
+    position: relative;
+    left: 0.7rem;
+    border-radius: 5px;
+    color: rgb(35, 34, 34);
+}
+
+.buttonOn{
+    background-color: green;
+}
+
+.buttonOff{
+    background-color: red;
+}
